@@ -14,6 +14,10 @@ If you want to run it:
 4. Start client by: `npm run dev`.
 5. Go to browsr with `localhost:3000`.
 
+There exists also the code coverage check command:
+Run `npm run coverage` then you can check the report under coverage folder. 
+In this project, code coverage is not fully handled. It should be greater than 80% in production to make sure code quality.
+
 There exists one e2e test for notifications:
 
 1. Make sure the app is running and the port is 3000 because e2e test using the url `localhost:3000`

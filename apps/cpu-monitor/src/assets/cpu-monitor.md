@@ -47,8 +47,9 @@ Display the cpu overload activities such as: Start to listen/ Overload/ Recover/
 1. This project as a poc more focus on if it works than it works perfect. So next need to think difference use case and check if we support it or not.
 2. bugfix && test.
 3. improve UI/UX.
-4. authentication
-5. export activities in a excel for more analysis.
-6. automatic notification email to admin.
-7. more functions.
-8. backend api security
+4. code coverage
+5. authentication
+6. export activities in a excel for more analysis.
+7. automatic notification email to admin.
+8. more functions.
+9. backend api security
