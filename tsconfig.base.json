@@ -14,7 +14,10 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@cpu-monitor-types": ["libs/cpu-monitor-types/src/index.ts"],
+      "@cpu-rest-api": ["libs/cpu-rest-api/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

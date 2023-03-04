@@ -1,0 +1,60 @@
+<div class="cpu-monitor-activities-header">
+  <div>
+    <span class="cpu-monitor-activities-title">Activities </span>
+    <span matTooltip="Warning Trigger Load index">
+      warning load:({{ warningLimit | percent }})</span
+    >
+  </div>
+
+  <div class="cpu-monitor-activities-action">
+    <div
+      class="cpu-monitor-activities-warning-limit-set"
+      *ngIf="editWarningLimit"
+    >
+      <mat-form-field>
+        <!-- <mat-label>Warning trigger limit</mat-label> -->
+        <input
+          matInput
+          type="text"
+          [(ngModel)]="warningLimit"
+          class="cpu-monitor-warning-edit"
+        />
+        <button
+          *ngIf="warningLimit"
+          matSuffix
+          mat-icon-button
+          aria-label="Clear"
+          (click)="warningLimit = 0.8"
+        >
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+      <button
+        mat-icon-button
+        class="cpu-monitor-warning-confirm"
+        matTooltip="save warning limit"
+        (click)="editWarningLimit = false; setWarningTrigger()"
+      >
+        <mat-icon>check</mat-icon>
+      </button>
+    </div>
+    <button
+      mat-icon-button
+      class="cpu-monitor-warning-setting"
+      matTooltip="Set warning load"
+      (click)="editWarningLimit = true"
+      *ngIf="!editWarningLimit"
+    >
+      <mat-icon>settings</mat-icon>
+    </button>
+    <!-- <button mat-icon-button matTooltip="Export activities">
+      <mat-icon>table</mat-icon>
+    </button> -->
+  </div>
+</div>
+<cpu-monitor-activities-item
+  *ngFor="let item of activitiesList"
+  [activityType]="item.type"
+  [activityDescription]="item.description"
+  [activityDate]="item.activityDate"
+></cpu-monitor-activities-item>

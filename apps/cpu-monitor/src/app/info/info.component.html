@@ -1,0 +1,38 @@
+<div clas="cpu-monitor-info-title">CPU Overview</div>
+<div class="cpu-monitor-info-carts">
+  <cpu-monitor-banner
+    [bannerText]="loadIndex"
+    [bannerName]="'Load Index'"
+    [bannerTooltip]="'Current CPU Load / number of cpu'"
+  ></cpu-monitor-banner>
+
+  <cpu-monitor-banner
+    [bannerText]="cpuOverLoadedCount"
+    [bannerName]="'Overload Count'"
+    [bannerTooltip]="
+      'How many times the current server get overloaded since we start to watch'
+    "
+  ></cpu-monitor-banner>
+
+  <cpu-monitor-banner
+    [bannerText]="cpuOverLoadMinues"
+    [bannerName]="'Overload Minutes'"
+    [bannerTooltip]="
+      'How many minutes the current server get overloaded since we start to watch'
+    "
+  ></cpu-monitor-banner>
+  <mat-card class="cpu-monitor-info-secondary-card">
+    <mat-card-content class="cpu-monitor-info-secondary-info">
+      <div>
+        <span>CPUs </span>
+        <span> ----- </span>
+        <span>{{ currentServerCpuCount$ | async }}</span>
+      </div>
+      <div>
+        <span>RT Load</span>
+        <span> ----- </span>
+        <span>{{ currentServerLatestLod$ | async }} </span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

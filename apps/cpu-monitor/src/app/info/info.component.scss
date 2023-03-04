@@ -1,0 +1,38 @@
+cpu-monitor-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+
+  .cpu-monitor-info-title {
+    padding-left: 16px;
+    font-family: Roboto, 'Helvetica Neue', sans-serif !important;
+    font-size: 24px !important;
+  }
+  .cpu-monitor-info-carts {
+    display: flex;
+    flex-direction: row;
+
+    .cpu-monitor-info-secondary-card {
+      max-height: 115px;
+      margin-top: 16px;
+      .cpu-monitor-info-secondary-info {
+        max-height: 115px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        place-content: flex-start space-evenly;
+        align-items: flex-start;
+        > div {
+          min-width: 120px;
+          display: flex;
+          flex-direction: row;
+          place-content: center space-between;
+          align-items: center;
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

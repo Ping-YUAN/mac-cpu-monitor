@@ -1,0 +1,70 @@
+cpu-monitor-nav {
+  display: flex;
+  max-height: 56px;
+
+  .cpu-monitor-nav-title {
+    font-size: 16px;
+    padding-left: 24px;
+    font-weight: bold;
+    font-family: 'League Spartan', sans-serif;
+  }
+
+  mat-toolbar {
+    max-height: 56px;
+    height: 100%;
+
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center space-between;
+    align-items: center;
+
+    .cpu-monitor-server-select {
+      min-width: 350px;
+      margin-left: 16px;
+      height: 100%;
+      .mat-mdc-form-field-subscript-wrapper {
+        max-height: 8px;
+      }
+    }
+
+    .cpu-monitor-end-action {
+      display: flex;
+      flex-direction: row;
+      font-size: 16px;
+      .cpu-monitor-connection-div {
+        display: flex;
+        flex-direction: row;
+        place-content: center;
+        align-items: center;
+        .cpu-monitor-connection-status-text {
+          font-size: 16px;
+          display: flex;
+          flex-direction: row;
+          place-content: center;
+          .connected {
+            background-color: green !important;
+
+            .mdc-evolution-chip__text-label {
+              color: rgb(255, 255, 255);
+            }
+          }
+
+          .lost {
+            background-color: #d60040 !important;
+            .mdc-evolution-chip__text-label {
+              color: rgb(255, 255, 255);
+            }
+          }
+
+          .connecting {
+            background-color: #784aa5 !important;
+            .mdc-evolution-chip__text-label {
+              color: rgb(255, 255, 255);
+            }
+          }
+        }
+      }
+    }
+  }
+}

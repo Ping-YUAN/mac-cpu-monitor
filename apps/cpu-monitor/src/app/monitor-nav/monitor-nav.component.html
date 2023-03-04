@@ -1,0 +1,44 @@
+<mat-toolbar>
+  <div>
+    <span class="cpu-monitor-nav-title">CPU Load Monitor</span>
+
+    <mat-form-field appearance="fill" class="cpu-monitor-server-select">
+      <mat-select [(value)]="selectedServerId">
+        <mat-option
+          (onSelectionChange)="onSelectionChange(server.id)"
+          *ngFor="let server of serverList$ | async"
+          [value]="server.id"
+        >
+          {{ server.name }} - {{ server.type }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="cpu-monitor-end-action">
+    <div class="cpu-monitor-connection-div">
+      <div class="cpu-monitor-connection-status-text">
+        <mat-chip-set>
+          <mat-chip [ngClass]="connectedStatus$ | async">
+            {{ connectedStatus$ | async }}
+          </mat-chip>
+        </mat-chip-set>
+      </div>
+    </div>
+    <button
+      mat-icon-button
+      *ngIf="!showHelp"
+      aria-label="Display help documentation"
+      (click)="onHelpClicked(true)"
+    >
+      <mat-icon>info_outlined</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      *ngIf="showHelp"
+      aria-label="Close help documentation"
+      (click)="onHelpClicked(false)"
+    >
+      <mat-icon>close_outlined</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

@@ -1,0 +1,20 @@
+cpu-monitor-banner {
+  margin: 16px;
+
+  .banner-item {
+    min-width: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cpu-monitor-banner {
+      font-size: 51px;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-weight: 600;
+      color: #784aa5;
+    }
+    .cpu-monitor-banner-name {
+      font-size: 16px;
+    }
+  }
+}

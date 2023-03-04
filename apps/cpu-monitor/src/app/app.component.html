@@ -1,2 +1,19 @@
-<mac-cpu-monitor-nx-welcome></mac-cpu-monitor-nx-welcome>
-<router-outlet></router-outlet>
+<cpu-monitor-nav
+  servers="servers"
+  (showHelpOutput)="onShowHelp($event)"
+></cpu-monitor-nav>
+<div class="cpu-monitor-content">
+  <div class="cpu-monitor-content-details">
+    <cpu-monitor-info></cpu-monitor-info>
+    <cpu-monitor-load-chart></cpu-monitor-load-chart>
+  </div>
+  <cpu-monitor-activities
+    class="cpu-monitor-activities"
+  ></cpu-monitor-activities>
+</div>
+<div class="help" [ngClass]="{ open: showHelp }">
+  <div class="container" tabindex="0">
+    <markdown #markdown class="markdown" src="{{ docPath }}" tabindex="0">
+    </markdown>
+  </div>
+</div>

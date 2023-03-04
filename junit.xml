@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="11" failures="0" errors="0" time="10.729">
+  <testsuite name="AppComponent" errors="0" failures="0" skipped="3" timestamp="2023-03-04T10:55:59" time="2.169" tests="3">
+    <testcase classname="AppComponent should create the app" name="AppComponent should create the app" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="AppComponent should have as title &apos;cpu-monitor&apos;" name="AppComponent should have as title &apos;cpu-monitor&apos;" time="0">
+      <skipped/>
+    </testcase>
+    <testcase classname="AppComponent should render title" name="AppComponent should render title" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="MonitorNavComponent" errors="0" failures="0" skipped="1" timestamp="2023-03-04T10:56:01" time="0.722" tests="1">
+    <testcase classname="MonitorNavComponent should create" name="MonitorNavComponent should create" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="LoadChartComponent" errors="0" failures="0" skipped="1" timestamp="2023-03-04T10:56:02" time="0.799" tests="1">
+    <testcase classname="LoadChartComponent should create" name="LoadChartComponent should create" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="BannerComponent" errors="0" failures="0" skipped="1" timestamp="2023-03-04T10:56:03" time="0.673" tests="1">
+    <testcase classname="BannerComponent should create" name="BannerComponent should create" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="InfoComponent" errors="0" failures="0" skipped="1" timestamp="2023-03-04T10:56:04" time="0.741" tests="1">
+    <testcase classname="InfoComponent should create" name="InfoComponent should create" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="ActivitiesComponent" errors="0" failures="0" skipped="1" timestamp="2023-03-04T10:56:04" time="0.669" tests="1">
+    <testcase classname="ActivitiesComponent should create" name="ActivitiesComponent should create" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+  <testsuite name="CpuLoadGateway" errors="0" failures="0" skipped="0" timestamp="2023-03-04T10:56:05" time="2.036" tests="1">
+    <testcase classname="CpuLoadGateway should be defined" name="CpuLoadGateway should be defined" time="0.016">
+    </testcase>
+  </testsuite>
+  <testsuite name="GET /" errors="0" failures="0" skipped="0" timestamp="2023-03-04T10:56:07" time="0.561" tests="1">
+    <testcase classname="GET / should return a message" name="GET / should return a message" time="0.06">
+    </testcase>
+  </testsuite>
+  <testsuite name="ActivitiesItemComponent" errors="0" failures="0" skipped="1" timestamp="2023-03-04T10:56:08" time="1.058" tests="1">
+    <testcase classname="ActivitiesItemComponent should create" name="ActivitiesItemComponent should create" time="0">
+      <skipped/>
+    </testcase>
+  </testsuite>
+</testsuites>

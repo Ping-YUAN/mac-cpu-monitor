@@ -3,7 +3,7 @@
   "$schema": "../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "sourceRoot": "apps/cpu-monitor/src",
-  "prefix": "mac-cpu-monitor",
+  "prefix": "cpu-monitor",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -20,7 +20,7 @@
           "apps/cpu-monitor/src/assets"
         ],
         "styles": ["apps/cpu-monitor/src/styles.scss"],
-        "scripts": []
+        "scripts": ["node_modules/apexcharts/dist/apexcharts.min.js"]
       },
       "configurations": {
         "production": {

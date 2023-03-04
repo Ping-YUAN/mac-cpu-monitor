@@ -1,13 +1,29 @@
-import { getGreeting } from '../support/app.po';
+import {
+  getOverLoadedTimes,
+  getPageTitle,
+  getWarningConfirmButton,
+  getWarningInput,
+  getWarningSettingIcon,
+} from '../support/app.po';
 
 describe('cpu-monitor', () => {
-  beforeEach(() => cy.visit('/'));
+  beforeEach(() => cy.visit('localhost:3000'));
 
-  it('should display welcome message', () => {
-    // Custom command example, see `../support/commands.ts` file
-    cy.login('my-email@something.com', 'myPassword');
+  it('should display pages', () => {
+    getPageTitle().contains('CPU Load Monitor');
+  });
 
-    // Function helper example, see `../support/app.po.ts` file
-    getGreeting().contains('Welcome cpu-monitor');
+  it('should get overload notification', () => {
+    cy.viewport(1400, 1000);
+
+    getWarningSettingIcon().click();
+    getWarningInput().clear().type('0.1');
+    getWarningConfirmButton().click();
+    // eslint-disable-next-line cypress/no-unnecessary-waiting
+    cy.wait(30000).then(() => {
+      getOverLoadedTimes().then((span) => {
+        expect(cy.wrap(Number(span.text())).should('be.gte', 1));
+      });
+    });
   });
 });

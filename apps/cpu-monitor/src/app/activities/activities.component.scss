@@ -1,0 +1,29 @@
+cpu-monitor-activities {
+  padding-left: 16px;
+  padding-right: 16px;
+  min-width: 300px;
+  .cpu-monitor-activities-header {
+    height: 100%;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center space-between;
+    align-items: center;
+    .cpu-monitor-activities-title {
+      font-size: 24px;
+      font-family: Roboto, 'Helvetica Neue', sans-serif;
+    }
+  }
+  .cpu-monitor-activities-action {
+    display: flex;
+    .cpu-monitor-activities-warning-limit-set {
+      display: flex;
+      flex-direction: row;
+      width: 200px;
+      height: 48px;
+      .mat-mdc-form-field-subscript-wrapper {
+        max-height: 8px;
+      }
+    }
+  }
+}
